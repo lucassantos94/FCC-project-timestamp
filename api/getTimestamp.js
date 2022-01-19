@@ -7,7 +7,7 @@ const getTimeStamp = (date)=>{
     dateInput = parseInt(date)
   }
   const dateTime = new Date(dateInput)
-  if (dateTime === 'Invalid Date')
+  if (dateTime.toString() === 'Invalid Date')
     throw new Error(dateTime)
 
   return {unix:dateTime.getTime(), utc: dateTime.toUTCString()}
